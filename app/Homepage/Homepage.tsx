@@ -56,6 +56,14 @@ const GlobalStyle = createGlobalStyle`
 export const Homepage = () => {
   return (
     <div>
+      <Box
+        width="100px"
+        height="100px"
+        borderRadius="10px"
+        border="1px solid green"
+        bg="cyan"
+      />
+
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <div>
@@ -64,6 +72,7 @@ export const Homepage = () => {
             <Box>
               <Button $primary>Button- 1</Button>
               <StyledButton variant="outline">Button- 2</StyledButton>
+              <StyledButton>Button- 2</StyledButton>
               <TomatoButton>Button-3</TomatoButton>
               <TomatoButton as="a" href="#">
                 Link with Tomato Button styles

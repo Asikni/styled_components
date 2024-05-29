@@ -11,8 +11,8 @@ export const Wrapper = styled.section`
 `;
 export const StyledButton = styled.button<{ variant?: string }>`
   border: 2px solid green;
-  background-color: ${(props) =>
-    props.variant === "outline" ? "yellow" : "orange"};
+  background-color: ${({ variant }) =>
+    variant === "outline" ? "yellow" : "orange"};
   color: ${(props) => (props.variant === "outline" ? "purple" : "black")};
   padding: 15px 32px;
   text-align: center;

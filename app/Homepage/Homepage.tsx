@@ -11,7 +11,8 @@ import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { Input } from "../Components/Button/Button";
 import { ButtonTwo } from "../Components/Button/Button";
 import { ButtonThree } from "../Components/Button/Button";
-import { Box } from "../Components/Inputs/Inputs";
+import { Box, ShapeBox } from "../Components/Inputs/Inputs";
+
 const theme = {
   themeOne: {
     dark: {
@@ -29,6 +30,18 @@ const theme = {
     main: "mediumseagreen",
     fg: "#BF4F74",
     bg: "white",
+  },
+  themeThree: {
+    breakpoints: ["40em", "52em", "64em"],
+    fontSizes: [12, 14, 16, 24, 32, 48, 64, 96, 128],
+    space: [
+      // margin and padding
+      0, 4, 8, 16, 32, 64, 128, 256,
+    ],
+    colors: {
+      blue: "#07c",
+      red: "#e10",
+    },
   },
 };
 
@@ -65,11 +78,15 @@ export const Homepage = () => {
       />
 
       <ThemeProvider theme={theme}>
+        <ShapeBox shape="circle" color="secondary">
+          nive
+        </ShapeBox>
+
         <GlobalStyle />
         <div>
           <Wrapper>
             <Title>Hello</Title>
-            <Box>
+            <Box bg="green">
               <Button $primary>Button- 1</Button>
               <StyledButton variant="outline">Button- 2</StyledButton>
               <StyledButton>Button- 2</StyledButton>

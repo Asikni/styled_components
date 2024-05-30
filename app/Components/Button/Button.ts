@@ -9,6 +9,8 @@ export const Wrapper = styled.section`
   padding: 4em;
   background: papayawhip;
 `;
+
+//when we define something here
 export const StyledButton = styled.button<{ variant?: string }>`
   border: 2px solid green;
   background-color: ${({ variant }) =>

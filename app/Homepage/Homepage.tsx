@@ -12,6 +12,11 @@ import { Input } from "../Components/Button/Button";
 import { ButtonTwo } from "../Components/Button/Button";
 import { ButtonThree } from "../Components/Button/Button";
 import { Box, ShapeBox } from "../Components/Inputs/Inputs";
+import {
+  StyleBox,
+  Text,
+  themeThree,
+} from "../Components/styledsheets/styledsheets";
 
 const theme = {
   themeOne: {
@@ -30,18 +35,6 @@ const theme = {
     main: "mediumseagreen",
     fg: "#BF4F74",
     bg: "white",
-  },
-  themeThree: {
-    breakpoints: ["40em", "52em", "64em"],
-    fontSizes: [12, 14, 16, 24, 32, 48, 64, 96, 128],
-    space: [
-      // margin and padding
-      0, 4, 8, 16, 32, 64, 128, 256,
-    ],
-    colors: {
-      blue: "#07c",
-      red: "#e10",
-    },
   },
 };
 
@@ -76,7 +69,16 @@ export const Homepage = () => {
         border="1px solid green"
         bg="cyan"
       />
-
+      <ThemeProvider theme={themeThree}>
+        <StyleBox
+          px={{ small: "4px", medium: "8px", large: "16px" }}
+          py={{ small: "4px", medium: "8px", large: "16px" }}
+          color={{ small: "white", medium: "grey", large: "yellow" }}
+          bg={{ _: "blue", medium: "green", large: "black" }}
+        >
+          <Text fontSize={{ small: 4, medium: 48, large: 64 }}>Basic demo</Text>
+        </StyleBox>
+      </ThemeProvider>
       <ThemeProvider theme={theme}>
         <ShapeBox shape="circle" color="secondary">
           nive

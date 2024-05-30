@@ -117,7 +117,7 @@ interface ShapeProps {
 
 export const ShapeBox = styled.div<ShapeProps>`
   ${({ shape, color }) => {
-    const backgroundColor = colors[color] || "#fff";
+    const backgroundColor = color ? colors[color] : "#fff";
 
     if (shape === "circle") {
       return `

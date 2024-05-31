@@ -16,6 +16,7 @@ import {
   StyleBox,
   Text,
   themeThree,
+  colors,
 } from "../Components/styledsheets/styledsheets";
 
 const theme = {
@@ -71,12 +72,12 @@ export const Homepage = () => {
       />
       <ThemeProvider theme={themeThree}>
         <StyleBox
-          px={{ small: "4px", medium: "8px", large: "16px" }}
-          py={{ small: "4px", medium: "8px", large: "16px" }}
-          color={{ small: "white", medium: "grey", large: "yellow" }}
-          bg={{ _: "blue", medium: "green", large: "black" }}
+          px={[2, 3, 5]}
+          py={[2, 3, 4]}
+          color={["blue", "redx", "blue"]}
+          bg={["redx", "blue"]} //upto medium it will be blue
         >
-          <Text fontSize={{ small: 4, medium: 48, large: 64 }}>Basic demo</Text>
+          <Text fontSize={{ small: 2, medium: 16, large: 64 }}>Basic demo</Text>
         </StyleBox>
       </ThemeProvider>
       <ThemeProvider theme={theme}>

@@ -72,12 +72,12 @@ export const Homepage = () => {
       />
       <ThemeProvider theme={themeThree}>
         <StyleBox
-          px={[2, 3, 5]}
+          px={[2, 3, 4]}
           py={[2, 3, 4]}
           color={["blue", "redx", "blue"]}
-          bg={["redx", "blue"]} //upto medium it will be blue
+          bg={["redx", "blue", "redx"]} //upto medium it will be blue
         >
-          <Text fontSize={{ small: 2, medium: 16, large: 64 }}>Basic demo</Text>
+          <Text fontSize={[2, 3, 4]}>Basic demo</Text>
         </StyleBox>
       </ThemeProvider>
       <ThemeProvider theme={theme}>
